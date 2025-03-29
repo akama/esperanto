@@ -12,7 +12,7 @@ build: [
 ]
 synopsis: "Virtual package relying on APE/Cosmopolitan"
 description: "This package can only install if we can run an APE/Cosmopolitan binary"
-available: [ arch = "x86_64" & (os = "linux" | os = "freebsd" | os = "openbsd") ]
+available: [ (arch = "x86_64" & (os = "linux" | os = "freebsd" | os = "openbsd")) | (arch = "arm64" & os = "macos") ]
 extra-source "hello.com" {
   src: "https://justine.lol/hello.com"
   checksum: "sha512=31a5a023c17a4eba236596d299c5e197e28d7ad2f59bbe2216a62b048b44c11190271e8df5f7d54f8a443a56d4ddbcdf50ef95fcc143fe5d3865e181897682a3"
